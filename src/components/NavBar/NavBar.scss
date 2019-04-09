@@ -1,7 +1,136 @@
 @import '../../scss/variables.scss';
 
+.active {
+  color: $orange;
+}
+
 nav {
   width: 100%;
+  padding: 1rem 0;
   background: $black;
   border-bottom: 2px solid $white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.nav-icons {
+  font-size: 3.5rem;
+  color: $white;
+
+  a {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $orange;
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+  }
+}
+
+.nav-links {
+  display: none;
+  font-size: 2rem;
+  color: $white;
+
+  a {
+    padding: 1rem 1.2rem;
+  }
+
+  a:hover {
+    color: $orange;
+    border-bottom: 2px solid $orange;
+  }
+}
+
+.nav-hamburger {
+  button {
+    font-size: 3.5rem;
+    color: $white;
+  }
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: lighten($black, 10%);
+  z-index: 2;
+
+  &__button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 4rem;
+    color: $white;
+  }
+
+  &__list {
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  &__link {
+    padding: 0.5rem;
+    font-size: 3rem;
+    color: $white;
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+    animation: slidein 1s ease-in-out;
+  }
+
+  &--hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+    animation: slideout 1s ease-in-out;
+  }
+}
+
+@media (min-width: $tablet) {
+  .nav-links {
+    display: block;
+  }
+
+  .nav-hamburger {
+    display: none;
+  }
+}
+
+@keyframes slidein {
+  from {
+    left: -100%;
+  }
+  
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideout {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
 }
