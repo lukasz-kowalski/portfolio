@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +7,6 @@ import MobileMenu from './MobileMenu';
 import './NavBar.scss';
 
 class NavBar extends React.Component {
-
   state = {
     showMobileMenu: false,
     mobileClassName: 'mobile-menu--hide'
@@ -17,14 +16,14 @@ class NavBar extends React.Component {
     this.setState({
       showMobileMenu: true,
       mobileClassName: 'mobile-menu--show'
-    });
+    }, () => document.body.setAttribute('style', 'overflow-y: hidden'));
   }
 
   handleCloseClick = () => {
     this.setState({
       showMobileMenu: false,
       mobileClassName: 'mobile-menu--hide'
-    });
+    }, () => document.body.removeAttribute('style'));
   }
 
   render() {
@@ -40,9 +39,9 @@ class NavBar extends React.Component {
             </a>
           </div>
           <div className='nav-links'>
-            <NavLink to='/'>HomePage</NavLink>
-            <NavLink to='/bio'>Bio</NavLink>
+            <NavLink to='/' exact>HomePage</NavLink>
             <NavLink to='/projects'>Projects</NavLink>
+            <NavLink to='/bio'>Bio</NavLink>
             <NavLink to='/contact'>Contact</NavLink>
           </div>
           <div className='nav-hamburger'>
@@ -60,4 +59,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

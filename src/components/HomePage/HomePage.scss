@@ -1,0 +1,70 @@
+@import '../../scss/variables.scss';
+
+.homepage {
+  background: url('/img/homepage-background.jpg') center center;
+  background-size: cover;
+
+  .overlay {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: $white;
+  }
+
+  &__container {
+    padding: 3rem;
+    background: $black;
+    line-height: 1.4;
+
+    @media (min-width: $tablet) {
+      h1 {
+        font-size: 5rem;
+      }
+  
+      h2 {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      h1 {
+        font-size: 4rem;
+      }
+  
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__link {
+    width: fit-content;
+    margin: 1.5rem auto 0 auto;
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid $white;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    @media (min-width: $tablet) {
+      margin: 2rem auto 0 auto;
+      padding: 3rem;
+      font-size: 2rem;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 1.5rem;
+    }
+  }
+
+  &__link:hover {
+    color: $orange;
+  }
+}
+
+.text-orange {
+  color: $orange;
+}

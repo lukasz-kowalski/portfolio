@@ -1,0 +1,97 @@
+@import '../../scss/variables.scss';
+
+.project-mobile {
+  height: 100%;
+  position: relative;
+  
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.project-tile {
+  height: 250px;
+  margin-bottom: 1.6rem;
+
+  @media (min-width: $desktop) {
+    height: 100%;
+  }
+
+  &__details {
+    height: 100%;
+    position: relative;
+    background: $white;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    h2 {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__page-link {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    @media (min-width: $desktop) {
+      top: 45%;
+    }
+  }
+
+  &__github-link {
+    @media (min-width: $desktop) {
+      top: 75%;
+    }
+  }
+
+  &__link:hover {
+    background: $black;
+    color: $white;
+  }
+
+  &__details {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  &__details:hover {
+    opacity: 1;
+
+    h2 {
+      animation: slideFromTop 0.5s;
+    }
+
+    .project-tile__page-link {
+      opacity: 1;
+    }
+
+    .project-tile__github-link {
+      animation: slideFromBottom 0.5s;
+    }
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 20%;
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    top: 85%;
+  }
+  to {
+    top: 75%;
+  }
+}

@@ -1,8 +1,11 @@
-$max-width: 1180px;
-
 $black: #333;
 $white: #eee;
 $orange: #FFA500;
 
 $tablet: 767px;
-$desktop: 1024px;
+$desktop: 1025px;
+
+@mixin max-width() {
+  max-width: 1180px;
+  margin: 0 auto;
+}

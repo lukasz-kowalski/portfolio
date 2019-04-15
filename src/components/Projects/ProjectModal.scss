@@ -1,0 +1,54 @@
+@import '../../scss/variables.scss';
+
+.project-modal {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  &--visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  &__container {
+    position: relative;
+    margin: auto;
+    padding: 2rem 4rem;
+    background: $white;
+
+    @media (min-width: $tablet) {
+      padding: 6rem 12rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      padding-top: 2.5rem;
+      font-size: 3rem;
+      text-align: center;
+
+      @media (min-width: $tablet) {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &__close {
+    font-size: 4rem;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 5%;
+    left: 82%;
+  }
+
+  &__link {
+    margin-bottom: 2rem;
+  }
+}

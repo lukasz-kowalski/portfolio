@@ -4,30 +4,30 @@
   color: $orange;
 }
 
+a { 
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 nav {
   width: 100%;
   padding: 1rem 0;
   background: $black;
-  border-bottom: 2px solid $white;
+  border-bottom: 4px solid $orange;
+  z-index: 100;
 }
 
 .nav-container {
+  @include max-width();
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: $max-width;
-  margin: 0 auto;
   padding: 0 1.6rem;
 }
 
 .nav-icons {
   font-size: 3.5rem;
   color: $white;
-
-  a {
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
 
   a:hover {
     color: $orange;
