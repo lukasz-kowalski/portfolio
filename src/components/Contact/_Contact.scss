@@ -1,0 +1,23 @@
+.contact {
+  @include max-width();
+  text-align: center;
+
+  p {
+    padding-top: 2rem;
+    font-size: 2.2rem;
+  }
+
+  a {
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: $orange;
+  }
+
+  &__icon {
+    vertical-align: middle;
+    font-size: 2.8rem;
+  }
+}

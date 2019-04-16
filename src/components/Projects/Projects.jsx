@@ -1,7 +1,6 @@
 import React from 'react';
 import projectsData from './projects-data';
 import ProjectTile from './ProjectTile';
-import './Projects.scss';
 
 const Projects = () => (
   <React.Fragment>

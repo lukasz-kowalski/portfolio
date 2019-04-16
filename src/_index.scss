@@ -10,6 +10,7 @@ html {
 
 body {
   min-height: 100vh;
+  padding-bottom: 1.6rem;
   font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -24,6 +25,15 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 main {
   min-height: calc(100vh - 65px);
+}
+
+.light-green {
+  color: $light-green;
+  font-weight: bold;
 }

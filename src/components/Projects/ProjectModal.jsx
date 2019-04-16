@@ -3,7 +3,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faWindowMaximize, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import IconLink from '../../ui/IconLink';
-import './ProjectModal.scss';
 
 const ProjectModal = ({ name, url, githubUrl, showModal, handleClose }) => {
   const modalClass = showModal ? 'project-modal--visible' : '';

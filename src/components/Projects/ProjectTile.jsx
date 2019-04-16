@@ -3,7 +3,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faWindowMaximize } from '@fortawesome/free-regular-svg-icons';
 import IconLink from '../../ui/IconLink';
 import ProjectModal from './ProjectModal';
-import './ProjectTile.scss';
 
 const ProjectTile = ({ name, img, url, githubUrl }) => {
   const [showModal, toggleModal] = useState(false);
