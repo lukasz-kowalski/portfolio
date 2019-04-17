@@ -1,3 +1,5 @@
+This is code for my Lukasz Kowalski portfolio, app is build in React with Hooks. Please check my website: (https://lukasz-kowalski.herokuapp.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -5,6 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
+
+Runs the app in Express server. Used to deploy to heroku<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm run server`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
