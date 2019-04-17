@@ -19,4 +19,9 @@
     font-size: 2rem;
     transform: translate(-50%, -50%);
   }
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
 }
